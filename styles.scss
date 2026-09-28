@@ -1,0 +1,226 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Aptos", "Noto Sans KR", "Segoe UI", system-ui, -apple-system, sans-serif;
+$headings-font-family: "Aptos", "Noto Sans KR", "Segoe UI", system-ui, sans-serif;
+
+/*-- scss:rules --*/
+:root {
+  --page-width: 960px;
+  --rule-color: rgba(var(--bs-dark-rgb), .14);
+  --muted-color: rgba(var(--bs-dark-rgb), .68);
+}
+
+html { scroll-behavior: smooth; }
+html[data-site-language="en"] [data-lang="ko"],
+html[data-site-language="ko"] [data-lang="en"] { display: none !important; }
+
+body { font-size: 1rem; line-height: 1.7; }
+h1, h2, h3 { color: var(--bs-dark); line-height: 1.25; letter-spacing: -.018em; }
+a { text-underline-offset: .16em; }
+p { max-width: 74ch; }
+.quarto-title-block { display: none; }
+.page-layout-full .content { padding: 0; }
+#quarto-content { min-height: calc(100vh - 126px); }
+
+/* Navigation */
+.navbar { box-shadow: none; border-bottom: 1px solid rgba(255, 255, 255, .2); }
+.navbar-brand { font-weight: 700; }
+.navbar-nav .nav-link { font-size: .94rem; font-weight: 600; }
+.navbar-container { gap: 1rem; }
+.language-switch {
+  order: 901;
+  margin-left: auto !important;
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  color: rgba(255, 255, 255, .62);
+  font-size: .8rem;
+}
+.language-switch button {
+  padding: .2rem .12rem;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: rgba(255, 255, 255, .72);
+  background: transparent;
+  font-size: .8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.language-switch button:hover,
+.language-switch button.active { color: #fff; border-bottom-color: #fff; }
+.language-switch button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+/* About */
+.academic-profile {
+  width: min(1040px, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0 6rem;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: clamp(2.75rem, 7vw, 5.5rem);
+  align-items: start;
+}
+.profile-summary { position: sticky; top: 6.5rem; }
+.profile-avatar {
+  width: 148px;
+  aspect-ratio: 1;
+  margin: 0 0 1.4rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(var(--bs-primary-rgb), .5);
+  border-radius: 50%;
+  color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), .1);
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -.05em;
+}
+.profile-avatar p { margin: 0; color: inherit; }
+.profile-name { margin: 0; font-size: 1.25rem; font-weight: 700; color: var(--bs-dark); }
+.profile-name-ko { margin: .05rem 0 .85rem; color: var(--muted-color); font-size: .88rem; }
+.profile-position { margin: 0 0 .1rem; font-weight: 650; }
+.profile-affiliation { margin: 0 0 .8rem; color: var(--muted-color); font-size: .88rem; line-height: 1.55; }
+.profile-email { font-size: .87rem; }
+.profile-content h1 { margin: 0 0 .5rem; font-size: clamp(2rem, 3.2vw, 2.45rem); font-weight: 650; }
+.profile-role {
+  margin: 0 0 .15rem;
+  color: var(--bs-primary);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 650;
+  line-height: 1.45;
+}
+.profile-description { margin: 0 0 1.8rem; color: var(--muted-color); font-size: .96rem; }
+.profile-content > h2 {
+  margin: 2.8rem 0 .8rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--rule-color);
+  font-size: 1.28rem;
+}
+.profile-content ul { padding-left: 1.2rem; }
+.profile-content li { margin-bottom: .28rem; }
+.cv-list { border-bottom: 1px solid var(--rule-color); }
+.cv-row {
+  padding: .9rem 0;
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 1rem;
+  border-top: 1px solid var(--rule-color);
+}
+.cv-row > span { color: var(--muted-color); font-size: .88rem; }
+.cv-row small { color: var(--muted-color); }
+
+/* Shared inner pages */
+.standard-page {
+  width: min(var(--page-width), calc(100% - 3rem));
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 5rem) 0 6rem;
+}
+.standard-page > h1,
+.standard-page > div > h1 { margin: 0 0 .9rem; font-size: clamp(2rem, 3.5vw, 2.5rem); font-weight: 650; }
+.standard-page > p,
+.standard-page > div > p { color: var(--muted-color); font-size: 1.02rem; }
+
+/* Research */
+.research-topics { margin-top: 3.1rem; }
+.research-topic {
+  padding: 1.65rem 0;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 1rem;
+  border-top: 1px solid var(--rule-color);
+}
+.research-topic:last-child { border-bottom: 1px solid var(--rule-color); }
+.topic-number { color: var(--bs-primary); font-size: .78rem; font-weight: 700; }
+.research-topic h2 { margin: -.15rem 0 .65rem; font-size: 1.35rem; }
+.research-topic p { margin: 0 0 .7rem; }
+.research-topic .topic-methods { margin: 1rem 0 0; color: var(--muted-color); font-size: .87rem; }
+.standard-page > h2,
+.standard-page > div > h2 {
+  margin: 3.5rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule-color);
+  font-size: 1.45rem;
+}
+.capability-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75rem; }
+.capability-column { padding-top: .9rem; border-top: 3px solid rgba(var(--bs-primary-rgb), .62); }
+.capability-column p { margin: 0; font-size: .9rem; }
+
+/* Projects */
+.standard-page > h2:not(:first-of-type),
+.standard-page > div > h2:not(:first-of-type) { margin-top: 2.5rem; }
+
+/* Publications */
+.publications-page > div:first-child > p { margin-bottom: 0; }
+.publication-section { margin-top: 3.2rem; }
+.publication-section > h2 {
+  margin: 0;
+  padding-bottom: .7rem;
+  border-bottom: 2px solid var(--bs-primary);
+  font-size: 1.4rem;
+}
+.publication-section > h2 strong { color: var(--bs-primary); }
+.publication-list { margin: 0; }
+.publication-entry {
+  padding: 1.3rem 0 1.4rem;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 1.1rem;
+  border-bottom: 1px solid var(--rule-color);
+}
+.publication-year { padding-top: .12rem; color: var(--muted-color); font-size: .86rem; font-weight: 650; }
+.publication-authors { margin: 0 0 .35rem; color: var(--muted-color); font-size: .87rem; line-height: 1.55; }
+.author-self {
+  padding: 0 .16rem;
+  color: #235f51;
+  background: rgba(var(--bs-primary-rgb), .22);
+  font-weight: 750;
+}
+.publication-entry h3 { margin: 0 0 .28rem; font-size: 1.04rem; font-weight: 650; line-height: 1.45; }
+.publication-entry h3 a { color: var(--bs-dark); text-decoration-color: rgba(var(--bs-primary-rgb), .6); }
+.publication-entry h3 a:hover { color: var(--bs-primary); }
+.publication-journal { margin: 0; color: var(--muted-color); font-size: .86rem; font-style: italic; }
+.manuscript-status {
+  margin-left: .65rem;
+  padding: .12rem .4rem;
+  border-radius: .2rem;
+  color: #235f51;
+  background: rgba(var(--bs-primary-rgb), .16);
+  font-size: .75rem;
+  font-style: normal;
+  white-space: normal;
+}
+.progress-section { margin-top: 4.5rem; }
+
+/* Footer */
+.nav-footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid var(--rule-color);
+  background: rgba(var(--bs-primary-rgb), .06);
+  color: var(--muted-color);
+  font-size: .86rem;
+}
+
+@media (max-width: 760px) {
+  .academic-profile { grid-template-columns: 1fr; gap: 2.4rem; }
+  .profile-summary { position: static; display: grid; grid-template-columns: 110px 1fr; column-gap: 1.25rem; align-items: center; }
+  .profile-avatar { width: 110px; margin: 0; grid-row: 1 / 6; }
+  .profile-name-ko, .profile-affiliation { margin-bottom: .45rem; }
+  .capability-columns { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+@media (max-width: 575px) {
+  .academic-profile,
+  .standard-page { width: min(100% - 2rem, var(--page-width)); }
+  .academic-profile { padding-top: 2.8rem; }
+  .profile-summary { display: block; text-align: center; }
+  .profile-avatar { width: 116px; margin: 0 auto 1rem; }
+  .profile-content h1 { font-size: 2rem; }
+  .cv-row { grid-template-columns: 1fr; gap: .25rem; }
+  .research-topic { grid-template-columns: 34px minmax(0, 1fr); gap: .65rem; }
+  .publication-entry { grid-template-columns: 1fr; gap: .18rem; }
+  .manuscript-status { display: inline-block; margin: .35rem 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}

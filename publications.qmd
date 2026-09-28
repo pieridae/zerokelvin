@@ -1,0 +1,31 @@
+---
+title: "Publications"
+page-layout: full
+include-after-body:
+  text: |
+    <script src="assets/publications-v3.js"></script>
+---
+
+::: {.standard-page .publications-page}
+::: {data-lang="en"}
+# Publications
+
+Gi Rim Han is highlighted in each author list. Article titles link to the publisher record or public preprint.
+:::
+
+::: {data-lang="ko"}
+# 논문
+
+각 논문의 전체 저자 목록에서 한기림의 이름을 강조했습니다. 논문 제목을 누르면 출판사 원문 또는 공개 프리프린트로 이동합니다.
+:::
+
+<section class="publication-section" aria-labelledby="peer-reviewed-heading">
+  <h2 id="peer-reviewed-heading"><span data-lang="en"><strong>14</strong> peer-reviewed articles</span><span data-lang="ko"><strong>14</strong>편의 동료심사 게재 논문</span></h2>
+  <div id="peer-reviewed-list" class="publication-list"></div>
+</section>
+
+<section class="publication-section progress-section" aria-labelledby="progress-heading">
+  <h2 id="progress-heading"><span data-lang="en"><strong>3</strong> manuscripts in progress</span><span data-lang="ko">진행 중 원고 <strong>3</strong>편</span></h2>
+  <div id="progress-list" class="publication-list"></div>
+</section>
+:::

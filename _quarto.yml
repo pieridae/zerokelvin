@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Gi Rim Han"
+  favicon: assets/favicon.svg
+  search: false
+  navbar:
+    pinned: true
+    left:
+      - href: index.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: projects.qmd
+        text: Projects
+  page-footer:
+    left: "© 2026 Gi Rim Han"
+
+format:
+  html:
+    theme:
+      - minty
+      - styles.scss
+    toc: false
+    smooth-scroll: true
+    anchor-sections: false
+    link-external-newwindow: true
+    include-in-header:
+      text: |
+        <meta name="theme-color" content="#78c2ad">
+        <meta name="description" content="Gi Rim Han — experimental physical chemist working in ultrafast spectroscopy and photophysical dynamics.">
+        <script>
+          document.documentElement.dataset.siteLanguage =
+            localStorage.getItem("grh-site-language") === "ko" ? "ko" : "en";
+        </script>
+        <script src="assets/site-v3.js" defer></script>
+
+execute:
+  freeze: auto
