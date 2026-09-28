@@ -1,0 +1,156 @@
+[
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research combines time-resolved spectroscopy, optical-frequency-comb instrumentation, and materials photophysics. The central aim is to measure ultrafast processes accurately and relate them to the chemical and structural evolution of the sample.\n\n\n01\n\n\n\nAI-NS combines asynchronously generated laser pulses with interferometric detection. It provides a broad temporal dynamic range, high spectral resolution, and rapid data acquisition without conventional mechanical delay scanning. My work includes AI-TA implementations across near-ultraviolet, near-infrared, and mid-infrared spectral regions.\n\n\nMethods: AI-NS · AI-TA · ASOPS · coherent averaging · optical frequency combs\n\n\n\n\n02\n\n\n\nUltrafast measurements are performed while the sample undergoes slower photochemical or structural change. This approach links carrier and exciton dynamics to processes such as photoinduced halide exchange and nanoplatelet aggregation.\n\n\nFocus: real-time measurement · photoinduced reactions · heterogeneous samples\n\n\n\n\n03\n\n\n\nTransient absorption, photoluminescence, and complementary spectroscopy are used to determine how charges and excitons are generated, transferred, and relaxed in molecular and solid-state systems.\n\n\nSystems: perovskites · organic chromophores · OLED emitters · photovoltaic materials\n\n\n\n\n04\n\n\n\nMid-infrared AI-TA directly probes band-edge carrier relaxation and coupled structural dynamics in narrow-bandgap semiconductors, including tellurium and InAs.\n\n\nTopics: band-edge carriers · coherent phonons · structural relaxation\n\n\n\n\n\n\n\n\nUltrafast spectroscopy\nTransient absorption, ASOPS, AI-NS, NUV/NIR/MIR measurements\n\n\nOptical characterization\nUV–Vis, photoluminescence, FT-IR, TCSPC, Raman\n\n\nInstrumentation and analysis\nOptical alignment, system integration, MATLAB, LabVIEW, Python"
+  },
+  {
+    "objectID": "research.html#experimental-capabilities",
+    "href": "research.html#experimental-capabilities",
+    "title": "Research",
+    "section": "",
+    "text": "Ultrafast spectroscopy\nTransient absorption, ASOPS, AI-NS, NUV/NIR/MIR measurements\n\n\nOptical characterization\nUV–Vis, photoluminescence, FT-IR, TCSPC, Raman\n\n\nInstrumentation and analysis\nOptical alignment, system integration, MATLAB, LabVIEW, Python"
+  },
+  {
+    "objectID": "research.html#실험-역량",
+    "href": "research.html#실험-역량",
+    "title": "Research",
+    "section": "실험 역량",
+    "text": "실험 역량\n\n\n초고속 분광학\n과도흡수, ASOPS, AI-NS, NUV/NIR/MIR 측정\n\n\n광학 특성 분석\nUV–Vis, PL, FT-IR, TCSPC, Raman\n\n\n장비 구축 및 분석\n광학 정렬, 시스템 통합, MATLAB, LabVIEW, Python"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Selected in 2026 · Principal investigator\nAn independent research program developing time-resolved optical-frequency-comb spectroscopy and applying it to complex photophysical systems.\n\n\n\nDevelopment of asynchronous and interferometric nonlinear spectroscopy from the near-ultraviolet and near-infrared to the mid-infrared, with an emphasis on coherent averaging and long-term measurement stability.\n\n\n\nUltrafast measurements of carrier dynamics during photoinduced ion exchange, aggregation, and structural evolution in perovskite nanomaterials.\n\n\n\nMid-infrared measurements of band-edge carriers, coherent phonons, and coupled electronic–structural relaxation in tellurium, InAs, and related materials."
+  },
+  {
+    "objectID": "projects.html#ibs-young-scientist-fellowship-research",
+    "href": "projects.html#ibs-young-scientist-fellowship-research",
+    "title": "Projects",
+    "section": "",
+    "text": "Selected in 2026 · Principal investigator\nAn independent research program developing time-resolved optical-frequency-comb spectroscopy and applying it to complex photophysical systems."
+  },
+  {
+    "objectID": "projects.html#ai-ns-across-spectral-windows",
+    "href": "projects.html#ai-ns-across-spectral-windows",
+    "title": "Projects",
+    "section": "",
+    "text": "Development of asynchronous and interferometric nonlinear spectroscopy from the near-ultraviolet and near-infrared to the mid-infrared, with an emphasis on coherent averaging and long-term measurement stability."
+  },
+  {
+    "objectID": "projects.html#real-time-spectroscopy-of-evolving-nanomaterials",
+    "href": "projects.html#real-time-spectroscopy-of-evolving-nanomaterials",
+    "title": "Projects",
+    "section": "",
+    "text": "Ultrafast measurements of carrier dynamics during photoinduced ion exchange, aggregation, and structural evolution in perovskite nanomaterials."
+  },
+  {
+    "objectID": "projects.html#carrier-and-phonon-dynamics-in-narrow-bandgap-materials",
+    "href": "projects.html#carrier-and-phonon-dynamics-in-narrow-bandgap-materials",
+    "title": "Projects",
+    "section": "",
+    "text": "Mid-infrared measurements of band-edge carriers, coherent phonons, and coupled electronic–structural relaxation in tellurium, InAs, and related materials."
+  },
+  {
+    "objectID": "projects.html#ibs-young-scientist-fellowship-연구",
+    "href": "projects.html#ibs-young-scientist-fellowship-연구",
+    "title": "Projects",
+    "section": "IBS Young Scientist Fellowship 연구",
+    "text": "IBS Young Scientist Fellowship 연구\n2026년 선정 · 연구책임자\n시간분해 광주파수 빗살 분광법을 개발하고 복잡한 광물리 시스템에 적용하는 독립 연구 프로그램입니다."
+  },
+  {
+    "objectID": "projects.html#다양한-파장-영역의-ai-ns",
+    "href": "projects.html#다양한-파장-영역의-ai-ns",
+    "title": "Projects",
+    "section": "다양한 파장 영역의 AI-NS",
+    "text": "다양한 파장 영역의 AI-NS\n근자외선과 근적외선에서 중적외선까지 비동기·간섭 비선형 분광법을 확장하고, 결맞음 평균과 장시간 측정 안정성을 향상하는 연구입니다."
+  },
+  {
+    "objectID": "projects.html#변화하는-나노소재의-실시간-분광학",
+    "href": "projects.html#변화하는-나노소재의-실시간-분광학",
+    "title": "Projects",
+    "section": "변화하는 나노소재의 실시간 분광학",
+    "text": "변화하는 나노소재의 실시간 분광학\n페로브스카이트 나노소재의 광유도 이온 교환, 응집, 구조 변화 과정에서 전하 운반자 동역학을 초고속으로 측정합니다."
+  },
+  {
+    "objectID": "projects.html#좁은-밴드갭-소재의-전하포논-동역학",
+    "href": "projects.html#좁은-밴드갭-소재의-전하포논-동역학",
+    "title": "Projects",
+    "section": "좁은 밴드갭 소재의 전하·포논 동역학",
+    "text": "좁은 밴드갭 소재의 전하·포논 동역학\n텔루륨, InAs 및 관련 소재에서 밴드 가장자리 전하, 결맞음 포논, 전자·구조 결합 이완을 중적외선으로 측정합니다."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "GRH\n\n\nGi Rim Han\n\n\n한기림\n\n\nResearch Professor\n\n\nIBS Center for Molecular Spectroscopy and DynamicsKorea University\n\nzerokelvin@korea.ac.kr\n\n\n\n\nUnderstanding light-driven matter across time scales\n\n\nExperimental physical chemist specializing in ultrafast spectroscopy\n\nI am a research professor at the IBS Center for Molecular Spectroscopy and Dynamics, Korea University. My research focuses on developing and applying asynchronous and interferometric nonlinear spectroscopy (AI-NS) and optical-frequency-comb techniques to investigate ultrafast dynamics in molecules and functional materials.\nMy work connects custom instrumentation with photophysical analysis, including charge-carrier, exciton, and phonon dynamics in perovskites, organic optoelectronic materials, and narrow-bandgap semiconductors. I also use in situ measurements to follow ultrafast responses while materials undergo slower photochemical or structural changes.\n\n\n\nAsynchronous and interferometric nonlinear spectroscopy (AI-NS)\nOptical-frequency-comb and ultrafast transient absorption spectroscopy\nCharge-carrier, exciton, and phonon dynamics\nPerovskite, organic optoelectronic, and semiconductor materials\nIn situ spectroscopy of photoinduced reactions\n\n\n\n\n\n\n2021–present\n\nResearch ProfessorIBS Center for Molecular Spectroscopy and Dynamics, Korea University\n\n\n\n2020–2021\n\nPostdoctoral ResearcherBio-Nanoscopy Laboratory, Seoul National University\n\n\n\n\n\n\n\n\n2014–2020\n\nM.S. and Ph.D. in Physical ChemistrySeoul National UniversityAdvisor: Seong Keun Kim · Co-advisor: Zee Hwan Kim\n\n\n\n2010–2014\n\nB.S. in ChemistrySeoul National University\n\n\n\n\n\n\n\n\n2026\n\nIBS Young Scientist Fellowship\n\n\n\n2016–2017\n\nFellowship for Future Generations of Foundation StudiesSeoul National University"
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "Asynchronous and interferometric nonlinear spectroscopy (AI-NS)\nOptical-frequency-comb and ultrafast transient absorption spectroscopy\nCharge-carrier, exciton, and phonon dynamics\nPerovskite, organic optoelectronic, and semiconductor materials\nIn situ spectroscopy of photoinduced reactions"
+  },
+  {
+    "objectID": "index.html#appointments",
+    "href": "index.html#appointments",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "2021–present\n\nResearch ProfessorIBS Center for Molecular Spectroscopy and Dynamics, Korea University\n\n\n\n2020–2021\n\nPostdoctoral ResearcherBio-Nanoscopy Laboratory, Seoul National University"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "2014–2020\n\nM.S. and Ph.D. in Physical ChemistrySeoul National UniversityAdvisor: Seong Keun Kim · Co-advisor: Zee Hwan Kim\n\n\n\n2010–2014\n\nB.S. in ChemistrySeoul National University"
+  },
+  {
+    "objectID": "index.html#honors",
+    "href": "index.html#honors",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "2026\n\nIBS Young Scientist Fellowship\n\n\n\n2016–2017\n\nFellowship for Future Generations of Foundation StudiesSeoul National University"
+  },
+  {
+    "objectID": "index.html#주요-연구-분야",
+    "href": "index.html#주요-연구-분야",
+    "title": "Gi Rim Han",
+    "section": "주요 연구 분야",
+    "text": "주요 연구 분야\n\n비동기·간섭 비선형 분광법(AI-NS)\n광주파수 빗살 및 초고속 과도흡수 분광법\n전하 운반자·엑시톤·포논 동역학\n페로브스카이트·유기 광전자·반도체 소재\n광유도 반응의 in situ 분광학"
+  },
+  {
+    "objectID": "index.html#경력",
+    "href": "index.html#경력",
+    "title": "Gi Rim Han",
+    "section": "경력",
+    "text": "경력\n\n\n2021–현재\n\n연구교수고려대학교 IBS 분자분광학 및 동력학 연구단\n\n\n\n2020–2021\n\n박사후연구원서울대학교 Bio-Nanoscopy Laboratory"
+  },
+  {
+    "objectID": "index.html#학력",
+    "href": "index.html#학력",
+    "title": "Gi Rim Han",
+    "section": "학력",
+    "text": "학력\n\n\n2014–2020\n\n물리화학 석·박사서울대학교지도교수: 김성근 · 공동지도교수: 김지환\n\n\n\n2010–2014\n\n화학 학사서울대학교"
+  },
+  {
+    "objectID": "index.html#수상-및-펠로십",
+    "href": "index.html#수상-및-펠로십",
+    "title": "Gi Rim Han",
+    "section": "수상 및 펠로십",
+    "text": "수상 및 펠로십\n\n\n2026\n\nIBS Young Scientist Fellowship\n\n\n\n2016–2017\n\nFellowship for Future Generations of Foundation Studies서울대학교"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Publications\nGi Rim Han is highlighted in each author list. Article titles link to the publisher record or public preprint.\n\n\n논문\n각 논문의 전체 저자 목록에서 한기림의 이름을 강조했습니다. 논문 제목을 누르면 출판사 원문 또는 공개 프리프린트로 이동합니다.\n\n\n\n14 peer-reviewed articles14편의 동료심사 게재 논문\n\n\n\n\n\n\n\n3 manuscripts in progress진행 중 원고 3편"
+  }
+]
