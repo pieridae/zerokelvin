@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Research",
+    "section": "",
+    "text": "Continue to Research / 연구 페이지로 이동"
+  },
+  {
+    "objectID": "namecard.html",
+    "href": "namecard.html",
+    "title": "Namecard",
+    "section": "",
+    "text": "Namecard\n\n\n\n\n명함"
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Setup",
+    "section": "",
+    "text": "Setup\nUV–Vis, photoluminescence, FT-IR, TCSPC, Raman\n\n\n\n\n\nSetup\nUV–Vis, photoluminescence, FT-IR, TCSPC, Raman"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "Asynchronous optical sampling\n\nPump and probe pulses\nA repeating fixed schematic of pump and probe pulses, a marked trigger, and six increasing delays to its left.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTRIGGER!\n\n\n\n\n\n\n\n\n&lt;- Trigger incoming...\n\nPUMP\nPROBE\n\n\n\n  \n    Interference generation\n  \n  \n    A fixed Gaussian pulse and a second pulse scanned in delay. The bottom trace shows the normalized, background-subtracted linear interferogram versus delay; the marker follows the current delay. Schematic, not measured data.\n    \n      \n      \n    \n    PULSE 1\n    E1(t)\n    \n    \n    PULSE 2\n    E2(t − τ)\n    \n    \n    INTERFEROGRAM\n    ΔI(τ)\n    \n    \n    \n    \n    −τ\n    0\n    +τ\n  \n  \n    \n      Pause animation애니메이션 일시정지\n    \n  \n\n\n  \n    \n    \n  \n  \n  Asynchronous and interferometric nonlinear spectroscopy\n\n\n\n\n\n\n\nGRH\n\n\nGi Rim Han\n\n\n한기림\n\n\nResearch Professor\n\n\nYoung Scientist Fellow (YSF)\n\n\nIBS Center for Molecular Spectroscopy and DynamicsKorea University\n\nEmail\n\n\n\n\nUnderstanding light-driven matter across time scales\n\n\nExperimental physical chemist specializing in ultrafast spectroscopy\n\nI am a research professor at the IBS Center for Molecular Spectroscopy and Dynamics, Korea University. My research focuses on developing and applying asynchronous and interferometric nonlinear spectroscopy (AI-NS) and optical-frequency-comb techniques to investigate ultrafast dynamics in molecules and functional materials.\nMy work connects custom instrumentation with photophysical analysis, including charge-carrier, exciton, and phonon dynamics in perovskites, organic optoelectronic materials, and narrow-bandgap semiconductors. I also use in situ measurements to follow ultrafast responses while materials undergo slower photochemical or structural changes.\n\n\n\nAsynchronous and interferometric nonlinear spectroscopy (AI-NS)\nOptical-frequency-comb and ultrafast transient absorption spectroscopy\nCharge-carrier, exciton, and phonon dynamics\nPerovskite, organic optoelectronic, and semiconductor materials\nIn situ spectroscopy of photoinduced reactions\n\n\n\n\n\n\n2021–present\n\nResearch ProfessorIBS Center for Molecular Spectroscopy and Dynamics, Korea University\n\n\n\n2020–2021\n\nPostdoctoral ResearcherBio-Nanoscopy Laboratory, Seoul National University\n\n\n\n\n\n\n\n\n2014–2020\n\nM.S. and Ph.D. in Physical ChemistrySeoul National UniversityAdvisor: Seong Keun Kim · Co-advisor: Zee Hwan Kim\n\n\n\n2010–2014\n\nB.S. in ChemistrySeoul National University\n\n\n\n\n\n\n\n\n2026\n\nIBS Young Scientist Fellowship\n\n\n\n2016–2017\n\nFellowship for Future Generations of Foundation StudiesSeoul National University"
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "Asynchronous and interferometric nonlinear spectroscopy (AI-NS)\nOptical-frequency-comb and ultrafast transient absorption spectroscopy\nCharge-carrier, exciton, and phonon dynamics\nPerovskite, organic optoelectronic, and semiconductor materials\nIn situ spectroscopy of photoinduced reactions"
+  },
+  {
+    "objectID": "index.html#appointments",
+    "href": "index.html#appointments",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "2021–present\n\nResearch ProfessorIBS Center for Molecular Spectroscopy and Dynamics, Korea University\n\n\n\n2020–2021\n\nPostdoctoral ResearcherBio-Nanoscopy Laboratory, Seoul National University"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "2014–2020\n\nM.S. and Ph.D. in Physical ChemistrySeoul National UniversityAdvisor: Seong Keun Kim · Co-advisor: Zee Hwan Kim\n\n\n\n2010–2014\n\nB.S. in ChemistrySeoul National University"
+  },
+  {
+    "objectID": "index.html#honors",
+    "href": "index.html#honors",
+    "title": "Gi Rim Han",
+    "section": "",
+    "text": "2026\n\nIBS Young Scientist Fellowship\n\n\n\n2016–2017\n\nFellowship for Future Generations of Foundation StudiesSeoul National University"
+  },
+  {
+    "objectID": "index.html#주요-연구-분야",
+    "href": "index.html#주요-연구-분야",
+    "title": "Gi Rim Han",
+    "section": "주요 연구 분야",
+    "text": "주요 연구 분야\n\n비동기·간섭 비선형 분광법(AI-NS)\n광주파수 빗살 및 초고속 과도흡수 분광법\n전하 운반자·엑시톤·포논 동역학\n페로브스카이트·유기 광전자·반도체 소재\n광유도 반응의 in situ 분광학"
+  },
+  {
+    "objectID": "index.html#경력",
+    "href": "index.html#경력",
+    "title": "Gi Rim Han",
+    "section": "경력",
+    "text": "경력\n\n\n2021–현재\n\n연구교수고려대학교 IBS 분자분광학 및 동력학 연구단\n\n\n\n2020–2021\n\n박사후연구원서울대학교 Bio-Nanoscopy Laboratory"
+  },
+  {
+    "objectID": "index.html#학력",
+    "href": "index.html#학력",
+    "title": "Gi Rim Han",
+    "section": "학력",
+    "text": "학력\n\n\n2014–2020\n\n물리화학 석·박사서울대학교지도교수: 김성근 · 공동지도교수: 김지환\n\n\n\n2010–2014\n\n화학 학사서울대학교"
+  },
+  {
+    "objectID": "index.html#수상-및-펠로십",
+    "href": "index.html#수상-및-펠로십",
+    "title": "Gi Rim Han",
+    "section": "수상 및 펠로십",
+    "text": "수상 및 펠로십\n\n\n2026\n\nIBS Young Scientist Fellowship\n\n\n\n2016–2017\n\nFellowship for Future Generations of Foundation Studies서울대학교"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Research\nMy research combines time-resolved spectroscopy, optical-frequency-comb instrumentation, and materials photophysics. The central aim is to measure ultrafast processes accurately and relate them to the chemical and structural evolution of the sample.\n\n\n01\n\n\nAsynchronous and Interferometric Nonlinear Spectroscopy\n\n\nAI-NS combines asynchronously generated laser pulses with interferometric detection. It provides a broad temporal dynamic range, high spectral resolution, and rapid data acquisition without conventional mechanical delay scanning. My work includes AI-TA implementations across near-ultraviolet, near-infrared, and mid-infrared spectral regions.\n\n\nMethods: AI-NS · AI-TA · ASOPS · coherent averaging · optical frequency combs\n\n\nCurrent instrumentation development extends AI-NS across spectral windows, with an emphasis on coherent averaging and long-term measurement stability.\n\n\n\n\n\n\n\nIBS Young Scientist Fellowship research\n\n\nSelected in 2026 · Principal investigator\n\n\nProject title: Expanding the scopes of multidimensional spectroscopy using asynchronous and interferometric nonlinear spectroscopy\n\n\nAn independent research program developing time-resolved optical-frequency-comb spectroscopy and applying it to complex photophysical systems.\n\n\n\n\n02\n\n\nIn situ ultrafast spectroscopy\n\n\nUltrafast measurements are performed while the sample undergoes slower photochemical or structural change. Current projects follow carrier dynamics during photoinduced ion exchange, aggregation, and structural evolution in perovskite nanomaterials. This approach links carrier and exciton dynamics to the evolving state of the sample.\n\n\nFocus: real-time measurement · photoinduced reactions · heterogeneous samples\n\n\n\n\n\n\n\n03\n\n\nPhotophysics of functional materials\n\n\nTransient absorption, photoluminescence, and complementary spectroscopy are used to determine how charges and excitons are generated, transferred, and relaxed in molecular and solid-state systems.\n\n\nSystems: perovskites · organic chromophores · OLED emitters · photovoltaic materials\n\n\n\n\n\n\n\n04\n\n\nMid-infrared carrier and phonon dynamics\n\n\nMid-infrared AI-TA directly probes band-edge carrier relaxation and coupled structural dynamics in narrow-bandgap semiconductors, including tellurium and InAs.\n\n\nTopics: band-edge carriers · coherent phonons · structural relaxation\n\n\n\n\n\n\n\n\n\n\n\n연구\n시간분해 분광학, 광주파수 빗살 기반 장비 구축, 소재 광물리 연구를 연결하고 있습니다. 초고속 과정을 정확하게 측정하고, 그 결과를 시료의 화학적·구조적 변화와 연결해 해석하는 것이 연구의 중심입니다.\n\n\n01\n\n\n비동기·간섭 비선형 분광법\n\n\nAI-NS는 서로 비동기적으로 생성된 레이저 펄스와 간섭 검출을 결합한 분광법입니다. 기계식 지연 주사 없이 넓은 시간 범위, 높은 스펙트럼 분해능, 빠른 데이터 획득을 구현합니다. 근자외선·근적외선·중적외선 영역의 AI-TA 장비와 측정법을 연구하고 있습니다.\n\n\n방법: AI-NS · AI-TA · ASOPS · 결맞음 평균 · 광주파수 빗살\n\n\n다양한 파장 영역으로 AI-NS 장비를 확장하며, 결맞음 평균과 장시간 측정 안정성을 향상하는 연구를 수행합니다.\n\n\n\n\n\n\n\nIBS Young Scientist Fellowship 연구\n\n\n2026년 선정 · 연구책임자\n\n\n과제명: Expanding the scopes of multidimensional spectroscopy using asynchronous and interferometric nonlinear spectroscopy\n\n\n시간분해 광주파수 빗살 분광법을 개발하고 복잡한 광물리 시스템에 적용하는 독립 연구 프로그램입니다.\n\n\n\n\n02\n\n\nIn situ 초고속 분광학\n\n\n시료가 느린 광화학 반응이나 구조 변화를 겪는 동안 초고속 측정을 연속적으로 수행합니다. 현재 페로브스카이트 나노소재의 광유도 이온 교환, 응집, 구조 변화 과정에서 전하 운반자 동역학을 측정하고 있습니다. 이를 통해 전하·엑시톤 동역학을 시료의 변화와 직접 연결합니다.\n\n\n주제: 실시간 측정 · 광유도 반응 · 불균일 시료\n\n\n\n\n\n\n\n03\n\n\n기능성 소재의 광물리\n\n\n과도흡수, 발광 및 보완 분광법을 이용하여 분자와 고체 소재에서 전하와 엑시톤이 생성·이동·이완하는 과정을 규명합니다.\n\n\n소재: 페로브스카이트 · 유기 색소 · OLED 발광체 · 태양전지 소재\n\n\n\n\n\n\n\n04\n\n\n중적외선 전하 운반자·포논 동역학\n\n\n중적외선 AI-TA를 이용하여 텔루륨과 InAs 같은 좁은 밴드갭 반도체의 밴드 가장자리 전하 이완과 구조 동역학을 직접 관찰합니다.\n\n\n주제: 밴드 가장자리 전하 · 결맞음 포논 · 구조 이완"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Publications\n\n\n논문\n\n\n† Co-first authors · * Corresponding authors† 공동 제1저자 · * 교신저자\n\n\n\n\n\n\n\n\n3 manuscripts under progress진행 중 원고 3편"
+  },
+  {
+    "objectID": "game.html",
+    "href": "game.html",
+    "title": "Game",
+    "section": "",
+    "text": "Game\n\n\n\n\nGame"
+  }
+]
