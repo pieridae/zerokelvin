@@ -1,0 +1,16 @@
+---
+title: "Game"
+page-layout: full
+---
+
+::: {data-lang="en"}
+::: {.standard-page .game-page}
+# Game
+:::
+:::
+
+::: {data-lang="ko"}
+::: {.standard-page .game-page}
+# Game
+:::
+:::

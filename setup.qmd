@@ -1,0 +1,24 @@
+---
+title: "Setup"
+page-layout: full
+---
+
+::: {data-lang="en"}
+::: {.standard-page .setup-page}
+# Setup
+
+UV–Vis, photoluminescence, FT-IR, TCSPC, Raman
+
+<!-- Add the AI-NS instrument photograph here when available. -->
+:::
+:::
+
+::: {data-lang="ko"}
+::: {.standard-page .setup-page}
+# Setup
+
+UV–Vis, photoluminescence, FT-IR, TCSPC, Raman
+
+<!-- Add the AI-NS instrument photograph here when available. -->
+:::
+:::

@@ -1,52 +1,12 @@
 ---
-title: "Projects"
+title: "Research"
 page-layout: full
+include-in-header:
+  text: |
+    <meta http-equiv="refresh" content="0; url=./research.html">
+    <link rel="canonical" href="./research.html">
 ---
 
-::: {data-lang="en"}
 ::: {.standard-page}
-# Projects
-
-## IBS Young Scientist Fellowship research
-
-**Selected in 2026 · Principal investigator**
-
-An independent research program developing time-resolved optical-frequency-comb spectroscopy and applying it to complex photophysical systems.
-
-## AI-NS across spectral windows
-
-Development of asynchronous and interferometric nonlinear spectroscopy from the near-ultraviolet and near-infrared to the mid-infrared, with an emphasis on coherent averaging and long-term measurement stability.
-
-## Real-time spectroscopy of evolving nanomaterials
-
-Ultrafast measurements of carrier dynamics during photoinduced ion exchange, aggregation, and structural evolution in perovskite nanomaterials.
-
-## Carrier and phonon dynamics in narrow-bandgap materials
-
-Mid-infrared measurements of band-edge carriers, coherent phonons, and coupled electronic–structural relaxation in tellurium, InAs, and related materials.
-:::
-:::
-
-::: {data-lang="ko"}
-::: {.standard-page}
-# 프로젝트
-
-## IBS Young Scientist Fellowship 연구
-
-**2026년 선정 · 연구책임자**
-
-시간분해 광주파수 빗살 분광법을 개발하고 복잡한 광물리 시스템에 적용하는 독립 연구 프로그램입니다.
-
-## 다양한 파장 영역의 AI-NS
-
-근자외선과 근적외선에서 중적외선까지 비동기·간섭 비선형 분광법을 확장하고, 결맞음 평균과 장시간 측정 안정성을 향상하는 연구입니다.
-
-## 변화하는 나노소재의 실시간 분광학
-
-페로브스카이트 나노소재의 광유도 이온 교환, 응집, 구조 변화 과정에서 전하 운반자 동역학을 초고속으로 측정합니다.
-
-## 좁은 밴드갭 소재의 전하·포논 동역학
-
-텔루륨, InAs 및 관련 소재에서 밴드 가장자리 전하, 결맞음 포논, 전자·구조 결합 이완을 중적외선으로 측정합니다.
-:::
+[Continue to Research / 연구 페이지로 이동](./research.html)
 :::

@@ -1,0 +1,16 @@
+---
+title: "Namecard"
+page-layout: full
+---
+
+::: {data-lang="en"}
+::: {.standard-page .namecard-page}
+# Namecard
+:::
+:::
+
+::: {data-lang="ko"}
+::: {.standard-page .namecard-page}
+# 명함
+:::
+:::

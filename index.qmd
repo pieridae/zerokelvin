@@ -5,6 +5,16 @@ title-block-banner: false
 ---
 
 ::: {data-lang="en"}
+::: {.research-hero aria-label="Spectroscopy schematics"}
+::: {.research-hero-inner}
+::: {.hero-visuals}
+{{< include content/asops.en.html >}}
+{{< include content/interference.html >}}
+{{< include content/ai-ns.html >}}
+:::
+:::
+:::
+
 ::: {.academic-profile}
 ::: {.profile-summary}
 ::: {.profile-avatar aria-label="Profile photograph placeholder"}
@@ -14,28 +24,14 @@ GRH
 <p class="profile-name">Gi Rim Han</p>
 <p class="profile-name-ko">한기림</p>
 <p class="profile-position">Research Professor</p>
+<p class="profile-fellowship">Young Scientist Fellow (YSF)</p>
 <p class="profile-affiliation">IBS Center for Molecular Spectroscopy and Dynamics<br>Korea University</p>
 
 <span class="profile-email" data-email-slot>Email</span>
 :::
 
 ::: {.profile-content}
-# Gi Rim Han
-
-<p class="profile-role">Understanding light-driven matter across time scales</p>
-<p class="profile-description">Experimental physical chemist specializing in ultrafast spectroscopy</p>
-
-I am a research professor at the IBS Center for Molecular Spectroscopy and Dynamics, Korea University. My research focuses on developing and applying **asynchronous and interferometric nonlinear spectroscopy (AI-NS)** and optical-frequency-comb techniques to investigate ultrafast dynamics in molecules and functional materials.
-
-My work connects custom instrumentation with photophysical analysis, including charge-carrier, exciton, and phonon dynamics in perovskites, organic optoelectronic materials, and narrow-bandgap semiconductors. I also use in situ measurements to follow ultrafast responses while materials undergo slower photochemical or structural changes.
-
-## Research interests
-
-- Asynchronous and interferometric nonlinear spectroscopy (AI-NS)
-- Optical-frequency-comb and ultrafast transient absorption spectroscopy
-- Charge-carrier, exciton, and phonon dynamics
-- Perovskite, organic optoelectronic, and semiconductor materials
-- In situ spectroscopy of photoinduced reactions
+{{< include content/intro.en.md >}}
 
 ## Appointments
 
@@ -80,6 +76,16 @@ My work connects custom instrumentation with photophysical analysis, including c
 :::
 
 ::: {data-lang="ko"}
+::: {.research-hero aria-label="Spectroscopy schematics"}
+::: {.research-hero-inner}
+::: {.hero-visuals}
+{{< include content/asops.ko.html >}}
+{{< include content/interference.html >}}
+{{< include content/ai-ns.html >}}
+:::
+:::
+:::
+
 ::: {.academic-profile}
 ::: {.profile-summary}
 ::: {.profile-avatar aria-label="프로필 사진 자리"}
@@ -89,28 +95,14 @@ GRH
 <p class="profile-name">한기림</p>
 <p class="profile-name-ko">Gi Rim Han</p>
 <p class="profile-position">연구교수</p>
+<p class="profile-fellowship">Young Scientist Fellow (YSF)</p>
 <p class="profile-affiliation">고려대학교<br>IBS 분자분광학 및 동력학 연구단</p>
 
 <span class="profile-email" data-email-slot>이메일</span>
 :::
 
 ::: {.profile-content}
-# 한기림
-
-<p class="profile-role">빛으로 구동되는 물질을 다양한 시간 척도에서 이해합니다</p>
-<p class="profile-description">초고속 분광학을 연구하는 실험 물리화학자</p>
-
-현재 고려대학교 IBS 분자분광학 및 동력학 연구단에서 연구교수로 재직하고 있습니다. **비동기·간섭 비선형 분광법(AI-NS)**과 광주파수 빗살 기반 측정법을 개발하고, 이를 분자와 기능성 소재의 초고속 동역학 연구에 적용하고 있습니다.
-
-직접 구축한 분광 장비와 광물리 분석을 연결하여 페로브스카이트, 유기 광전자소재, 좁은 밴드갭 반도체의 전하·엑시톤·포논 동역학을 연구합니다. 또한 소재가 광화학 반응이나 구조 변화를 겪는 동안의 초고속 응답을 실시간으로 관찰하는 in situ 분광 연구를 수행합니다.
-
-## 주요 연구 분야
-
-- 비동기·간섭 비선형 분광법(AI-NS)
-- 광주파수 빗살 및 초고속 과도흡수 분광법
-- 전하 운반자·엑시톤·포논 동역학
-- 페로브스카이트·유기 광전자·반도체 소재
-- 광유도 반응의 in situ 분광학
+{{< include content/intro.ko.md >}}
 
 ## 경력
 
