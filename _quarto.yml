@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - "assets/**"
   render:
     - index.qmd
     - research.qmd
@@ -52,7 +54,7 @@ format:
             document.documentElement.dataset.siteLanguage = "en";
           }
         </script>
-        <script src="assets/site-v3.js?v=20261023-static-mobile" defer></script>
+        <script src="assets/site-v3.js?v=20261023-pages-assets" defer></script>
 
 execute:
   freeze: auto

@@ -3,7 +3,7 @@ title: "Publications"
 page-layout: full
 include-after-body:
   text: |
-    <script src="assets/publications-v3.js?v=20261023-year-groups"></script>
+    <script src="assets/publications-v3.js?v=20261023-pages-assets"></script>
 ---
 
 ::: {.standard-page .publications-page}
