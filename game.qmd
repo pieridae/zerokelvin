@@ -3,14 +3,57 @@ title: "Game"
 page-layout: full
 ---
 
-::: {data-lang="en"}
-::: {.standard-page .game-page}
-# Game
-:::
-:::
-
-::: {data-lang="ko"}
-::: {.standard-page .game-page}
-# Game
-:::
-:::
+```{=html}
+<link rel="stylesheet" href="assets/light-align.css">
+<section class="light-align" id="light-align" aria-labelledby="la-table-title">
+  <div class="la-layout">
+    <div class="la-table-panel">
+      <div class="la-table-bar">
+        <h1 class="la-table-title" id="la-table-title"><span data-i18n="table">OPTICAL TABLE</span></h1>
+<div class="la-top-actions" role="group" aria-label="Playback and puzzle actions"><button type="button" id="la-play" class="la-primary">Pause</button><button type="button" id="la-undo" data-i18n="undo">Undo</button><button type="button" id="la-reset" data-i18n="reset">Reset table</button><button type="button" id="la-hint-toggle" data-i18n="hint">Need a hint?</button></div>
+      </div>
+      <div class="la-board" id="la-board" role="group" aria-label="15 by 15 optical table" aria-describedby="la-help">
+        <svg id="la-svg" viewBox="0 0 600 600" aria-hidden="true"></svg>
+        <div class="la-cells" id="la-cells"></div>
+      </div>
+      <div class="la-bottom-controls">
+        <div class="la-transport">
+          <span id="la-coordinate">X &mdash; / Y &mdash;</span>
+          <label hidden><span data-i18n="speed">Speed</span><select id="la-speed" aria-label="Pulse speed"><option value="2.4">0.3&times;</option><option value="3.2" selected>0.4&times;</option><option value="4">0.5&times;</option><option value="4.8">0.6&times;</option><option value="8">1&times;</option><option value="16">2&times;</option></select></label>
+          <label class="la-path-toggle"><input type="checkbox" id="la-show-path"><span data-i18n="showPath">Show path</span></label>
+        </div>
+        <div class="la-toolbox">
+          <h2 class="la-label" data-i18n="toolbox">ELEMENTS</h2>
+          <div id="la-tools" class="la-tools"></div>
+          <p id="la-help" data-i18n="help">Choose an element, then tap a square. Tap it again to rotate or switch H/V.</p>
+        </div>
+        <div class="la-legend">
+          <span><i class="la-key laser"></i><span data-i18n="laser">Laser</span></span>
+          <span><i class="la-key hwp"></i><span data-i18n="hwp">HWP</span></span>
+          <span><i class="la-key polarizer" aria-hidden="true">H</i><span data-i18n="polarizer">Polarizer</span></span>
+          <span><i class="la-key sample"></i><span data-i18n="sample">Sample</span></span>
+          <span><i class="la-key detector"></i><span data-i18n="detector">Detector</span></span>
+          <span><i class="la-key wall"></i><span data-i18n="wall">Block</span></span>
+        </div>
+        <p id="la-hint" class="la-hint" hidden></p>
+      </div>
+    </div>
+    <div class="la-sidebar" role="complementary" aria-label="Game controls">
+      <div class="la-modes" role="group" aria-label="Game mode"><button type="button" data-mode="puzzle" aria-pressed="true" data-i18n="puzzles">Puzzles</button><button type="button" data-mode="sandbox" aria-pressed="false" data-i18n="sandbox">Free play</button></div>
+      <div class="la-mission">
+        <label class="la-label" for="la-level" data-i18n="mission">YOUR MISSION</label>
+        <select id="la-level" aria-label="Choose a puzzle"></select>
+        <h2 id="la-mission-title"></h2><p id="la-objective"></p>
+        <div class="la-stats"><div><span data-i18n="received">Pulses received</span><strong id="la-hits">0 / 5</strong></div><div><span data-i18n="mirrors">Mirrors</span><strong id="la-count">0 / 1</strong></div></div>
+        <div class="la-status" id="la-status" role="status" aria-live="polite"></div>
+        <button type="button" id="la-next" class="la-primary" hidden data-i18n="next">Next puzzle &rarr;</button>
+      </div>
+    </div>
+  </div>
+<dialog id="la-celebration" class="la-celebration" aria-labelledby="la-celebration-title" aria-describedby="la-celebration-message"><canvas id="la-fireworks" aria-hidden="true"></canvas><div class="la-celebration-card"><h2 id="la-celebration-title">축하합니다!</h2><p id="la-celebration-message" data-i18n="celebrationMessage">All stages complete. Beautifully aligned!</p><button type="button" id="la-celebration-close" data-i18n="celebrationContinue" autofocus>Keep playing</button></div></dialog>
+  <noscript>This game needs JavaScript.</noscript>
+</section>
+<script src="assets/light-align-engine.js" defer></script>
+<script src="assets/light-align-celebration.js" defer></script>
+<script src="assets/light-align.js" defer></script>
+```

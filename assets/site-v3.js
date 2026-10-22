@@ -107,6 +107,7 @@
 
   function mountReveals() {
     if (!("IntersectionObserver" in window)) return;
+    const compactScreen = window.matchMedia("(max-width: 760px)");
     const selector = [
       ".research-hero-inner",
       ".profile-summary", ".profile-content > h1", ".profile-role", ".profile-description",
@@ -132,7 +133,7 @@
         // Avoid animating a section and its nested content at the same time.
         if (element.parentElement.closest(".motion-reveal")) return;
         const bounds = element.getBoundingClientRect();
-        if (reducedMotion.matches || (immediate && bounds.top < innerHeight)) {
+        if (reducedMotion.matches || compactScreen.matches || (immediate && bounds.top < innerHeight)) {
           element.classList.add("is-visible");
           observer.unobserve(element);
         }
@@ -148,6 +149,7 @@
     const main = document.querySelector("main");
     if (main) new MutationObserver(() => refreshReveals()).observe(main, { childList: true, subtree: true });
     reducedMotion.addEventListener("change", () => refreshReveals(true));
+    compactScreen.addEventListener("change", () => refreshReveals(true));
     document.addEventListener("focusin", (event) => {
       const block = event.target.closest(".motion-reveal");
       if (block) { block.classList.add("is-visible"); observer.unobserve(block); }
@@ -226,10 +228,10 @@
       const returnTrace = svg.querySelector(".interferogram-return");
       const cursor = svg.querySelector(".delay-cursor");
       const point = svg.querySelector(".interferogram-point");
-      svg.querySelector('[data-pulse-field="one"]').setAttribute("d", pathFor(field, 88, 30));
-      svg.querySelector('[data-pulse-envelope="one"]').setAttribute("d", pathFor(envelope, 88, 30));
-      const movingField = pathFor(field, 184, 30, -2.1, 2.1);
-      const movingEnvelope = pathFor(envelope, 184, 30, -2.1, 2.1);
+      svg.querySelector('[data-pulse-field="one"]').setAttribute("d", pathFor(field, 76, 30));
+      svg.querySelector('[data-pulse-envelope="one"]').setAttribute("d", pathFor(envelope, 76, 30));
+      const movingField = pathFor(field, 164, 30, -2.1, 2.1);
+      const movingEnvelope = pathFor(envelope, 164, 30, -2.1, 2.1);
       pulseTwo.setAttribute("d", movingField);
       envelopeTwo.setAttribute("d", movingEnvelope);
       runVisibleAnimation(svg, (seconds) => {

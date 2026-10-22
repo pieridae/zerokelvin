@@ -216,5 +216,11 @@ function renderPublications() {
   if (progressList) progressList.innerHTML = manuscripts.map((item) => publicationMarkup(item, true)).join("");
 }
 
-document.addEventListener("DOMContentLoaded", renderPublications);
-document.addEventListener("languagechange", renderPublications);
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", renderPublications);
+  document.addEventListener("languagechange", renderPublications);
+}
+
+if (typeof module !== "undefined") {
+  module.exports = { peerReviewed, manuscripts, publicationsByYear, publicationMarkup };
+}

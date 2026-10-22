@@ -1,1 +1,1 @@
-# Ultrafast spectroscopy · Optical frequency combs · Photochemistry and dynamics {#profile-fields-en .profile-fields}
+# <span class="profile-field">Ultrafast spectroscopy</span> <span class="profile-field-separator" aria-hidden="true">·</span> <span class="profile-field">Optical frequency combs</span> <span class="profile-field-separator" aria-hidden="true">·</span> <span class="profile-field">Photochemistry and dynamics</span> {#profile-fields-en .profile-fields}

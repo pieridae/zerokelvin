@@ -1,5 +1,6 @@
 ---
 title: "Research"
+description: "Research by Gi Rim Han: AI-NS, in situ ultrafast spectroscopy, functional-material photophysics, and mid-infrared carrier and phonon dynamics."
 page-layout: full
 ---
 
@@ -7,13 +8,11 @@ page-layout: full
 ::: {.standard-page .research-page}
 # Research
 
-My research combines time-resolved spectroscopy, optical-frequency-comb instrumentation, and materials photophysics. The central aim is to measure ultrafast processes accurately and relate them to the chemical and structural evolution of the sample.
-
 ::: {.research-topics}
 ::: {.research-topic .research-topic-with-project}
 <span class="topic-number">01</span>
 <div class="topic-copy">
-<h2>Asynchronous and Interferometric Nonlinear Spectroscopy</h2>
+<h2>Asynchronous and Interferometric Nonlinear Spectroscopy (AI-NS)</h2>
 <p>AI-NS combines asynchronously generated laser pulses with interferometric detection. It provides a broad temporal dynamic range, high spectral resolution, and rapid data acquisition without conventional mechanical delay scanning. My work includes AI-TA implementations across near-ultraviolet, near-infrared, and mid-infrared spectral regions.</p>
 <p class="topic-methods"><strong>Methods:</strong> AI-NS · AI-TA · ASOPS · coherent averaging · optical frequency combs</p>
 <p>Current instrumentation development extends AI-NS across spectral windows, with an emphasis on coherent averaging and long-term measurement stability.</p>
@@ -32,7 +31,7 @@ My research combines time-resolved spectroscopy, optical-frequency-comb instrume
 <h2>In situ ultrafast spectroscopy</h2>
 <p>Ultrafast measurements are performed while the sample undergoes slower photochemical or structural change. Current projects follow carrier dynamics during photoinduced ion exchange, aggregation, and structural evolution in perovskite nanomaterials. This approach links carrier and exciton dynamics to the evolving state of the sample.</p>
 <p class="topic-methods"><strong>Focus:</strong> real-time measurement · photoinduced reactions · heterogeneous samples</p>
-</div><figure class="research-figure research-figure-fit-text"><a href="assets/Research2.PNG" target="_blank" rel="noopener" aria-label="Open research figure 2"><img src="assets/Research2.PNG" alt="In situ pump-probe spectroscopy setup and time scales for evolving perovskite nanomaterials" loading="lazy" decoding="async"></a></figure>
+</div><figure class="research-figure research-figure-fit-text"><a href="assets/Research01.PNG" target="_blank" rel="noopener" aria-label="Open research figure 2"><img src="assets/Research01.PNG" alt="In situ pump-probe spectroscopy setup and time scales for evolving perovskite nanomaterials" loading="lazy" decoding="async"></a></figure>
 :::
 
 ::: {.research-topic}
@@ -61,13 +60,11 @@ My research combines time-resolved spectroscopy, optical-frequency-comb instrume
 ::: {.standard-page .research-page}
 # 연구
 
-시간분해 분광학, 광주파수 빗살 기반 장비 구축, 소재 광물리 연구를 연결하고 있습니다. 초고속 과정을 정확하게 측정하고, 그 결과를 시료의 화학적·구조적 변화와 연결해 해석하는 것이 연구의 중심입니다.
-
 ::: {.research-topics}
 ::: {.research-topic .research-topic-with-project}
 <span class="topic-number">01</span>
 <div class="topic-copy">
-<h2>비동기·간섭 비선형 분광법</h2>
+<h2>비동기·간섭 비선형 분광법 (AI-NS)</h2>
 <p>AI-NS는 서로 비동기적으로 생성된 레이저 펄스와 간섭 검출을 결합한 분광법입니다. 기계식 지연 주사 없이 넓은 시간 범위, 높은 스펙트럼 분해능, 빠른 데이터 획득을 구현합니다. 근자외선·근적외선·중적외선 영역의 AI-TA 장비와 측정법을 연구하고 있습니다.</p>
 <p class="topic-methods"><strong>방법:</strong> AI-NS · AI-TA · ASOPS · 결맞음 평균 · 광주파수 빗살</p>
 <p>다양한 파장 영역으로 AI-NS 장비를 확장하며, 결맞음 평균과 장시간 측정 안정성을 향상하는 연구를 수행합니다.</p>
@@ -86,7 +83,7 @@ My research combines time-resolved spectroscopy, optical-frequency-comb instrume
 <h2>In situ 초고속 분광학</h2>
 <p>시료가 느린 광화학 반응이나 구조 변화를 겪는 동안 초고속 측정을 연속적으로 수행합니다. 현재 페로브스카이트 나노소재의 광유도 이온 교환, 응집, 구조 변화 과정에서 전하 운반자 동역학을 측정하고 있습니다. 이를 통해 전하·엑시톤 동역학을 시료의 변화와 직접 연결합니다.</p>
 <p class="topic-methods"><strong>주제:</strong> 실시간 측정 · 광유도 반응 · 불균일 시료</p>
-</div><figure class="research-figure research-figure-fit-text"><a href="assets/Research2.PNG" target="_blank" rel="noopener" aria-label="Open research figure 2"><img src="assets/Research2.PNG" alt="In situ pump-probe spectroscopy setup and time scales for evolving perovskite nanomaterials" loading="lazy" decoding="async"></a></figure>
+</div><figure class="research-figure research-figure-fit-text"><a href="assets/Research01.PNG" target="_blank" rel="noopener" aria-label="Open research figure 2"><img src="assets/Research01.PNG" alt="In situ pump-probe spectroscopy setup and time scales for evolving perovskite nanomaterials" loading="lazy" decoding="async"></a></figure>
 :::
 
 ::: {.research-topic}

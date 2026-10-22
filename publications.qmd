@@ -1,9 +1,8 @@
 ---
 title: "Publications"
+description: "Publications by Gi Rim Han on ultrafast spectroscopy, asynchronous and interferometric nonlinear spectroscopy, and photochemistry and dynamics."
 page-layout: full
-include-after-body:
-  text: |
-    <script src="assets/publications-v3.js?v=20261023-pages-assets"></script>
+html-table-processing: none
 ---
 
 ::: {.standard-page .publications-page}
@@ -19,12 +18,16 @@ include-after-body:
 
 <p class="author-legend"><span data-lang="en">† Co-first authors · * Corresponding authors</span><span data-lang="ko">† 공동 제1저자 · * 교신저자</span></p>
 
-<section class="publication-section peer-reviewed-section" aria-label="Peer-reviewed articles">
-  <div id="peer-reviewed-list" class="publication-list"></div>
-</section>
+::: {.publication-section .peer-reviewed-section aria-label="Peer-reviewed articles"}
+::: {#peer-reviewed-list .publication-list}
+{{< include content/publications-peer.html >}}
+:::
+:::
 
-<section class="publication-section progress-section" aria-labelledby="progress-heading">
+::: {.publication-section .progress-section aria-labelledby="progress-heading"}
   <h2 id="progress-heading"><span data-lang="en"><strong>3</strong> manuscripts under progress</span><span data-lang="ko">진행 중 원고 <strong>3</strong>편</span></h2>
-  <div id="progress-list" class="publication-list"></div>
-</section>
+::: {#progress-list .publication-list}
+{{< include content/publications-progress.html >}}
+:::
+:::
 :::

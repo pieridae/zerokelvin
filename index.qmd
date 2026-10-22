@@ -1,8 +1,11 @@
 ---
 title: "Gi Rim Han"
+description: "Gi Rim Han, experimental physical chemist at Korea University. Ultrafast spectroscopy, optical frequency combs, and photochemistry and dynamics."
 page-layout: full
 title-block-banner: false
 ---
+
+{{< include content/profile-schema.html >}}
 
 ::: {data-lang="en"}
 ::: {.research-hero aria-label="Spectroscopy schematics"}
@@ -17,10 +20,6 @@ title-block-banner: false
 
 ::: {.academic-profile}
 ::: {.profile-summary}
-::: {.profile-avatar aria-label="Profile photograph placeholder"}
-GRH
-:::
-
 <p class="profile-name">Gi Rim Han</p>
 <p class="profile-name-ko">한기림</p>
 <p class="profile-position">Research Professor</p>
@@ -28,6 +27,10 @@ GRH
 <p class="profile-affiliation">IBS Center for Molecular Spectroscopy and Dynamics<br>Korea University</p>
 
 <span class="profile-email" data-email-slot>Email</span>
+<div class="profile-links" aria-label="Researcher profiles">
+<a href="https://scholar.google.com/citations?user=0EDKEswAAAAJ&amp;hl=en" target="_blank" rel="me noopener"><svg class="profile-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m2 8 10-5 10 5-10 5z" fill="currentColor"/><path d="M6 11v5c3 3 9 3 12 0v-5M3 9v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Google Scholar</span></a>
+<a href="https://www.linkedin.com/in/%EA%B8%B0%EB%A6%BC-%ED%95%9C-46a1a4208/?locale=en-US" target="_blank" rel="me noopener"><svg class="profile-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><circle cx="6.5" cy="6.7" r="1.5" fill="#fff"/><path d="M5 10h3v9H5zm5 0h2.9v1.2c.7-1 1.7-1.5 3-1.5 2.7 0 3.6 1.7 3.6 4.2V19h-3v-4.5c0-1.3-.1-2.3-1.6-2.3s-1.9 1.1-1.9 2.3V19h-3z" fill="#fff"/></svg><span>LinkedIn</span></a>
+</div>
 :::
 
 ::: {.profile-content}
@@ -36,6 +39,10 @@ GRH
 ## Appointments
 
 ::: {.cv-list}
+::: {.cv-row}
+<span>2026–present</span>
+<div><strong>Young Scientist Fellow (YSF)</strong><br>IBS Center for Molecular Spectroscopy and Dynamics, Korea University</div>
+:::
 ::: {.cv-row}
 <span>2021–present</span>
 <div><strong>Research Professor</strong><br>IBS Center for Molecular Spectroscopy and Dynamics, Korea University</div>
@@ -88,10 +95,6 @@ GRH
 
 ::: {.academic-profile}
 ::: {.profile-summary}
-::: {.profile-avatar aria-label="프로필 사진 자리"}
-GRH
-:::
-
 <p class="profile-name">한기림</p>
 <p class="profile-name-ko">Gi Rim Han</p>
 <p class="profile-position">연구교수</p>
@@ -99,6 +102,10 @@ GRH
 <p class="profile-affiliation">고려대학교<br>IBS 분자분광학 및 동력학 연구단</p>
 
 <span class="profile-email" data-email-slot>이메일</span>
+<div class="profile-links" aria-label="Researcher profiles">
+<a href="https://scholar.google.com/citations?user=0EDKEswAAAAJ&amp;hl=en" target="_blank" rel="me noopener"><svg class="profile-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m2 8 10-5 10 5-10 5z" fill="currentColor"/><path d="M6 11v5c3 3 9 3 12 0v-5M3 9v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Google Scholar</span></a>
+<a href="https://www.linkedin.com/in/%EA%B8%B0%EB%A6%BC-%ED%95%9C-46a1a4208/?locale=en-US" target="_blank" rel="me noopener"><svg class="profile-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><circle cx="6.5" cy="6.7" r="1.5" fill="#fff"/><path d="M5 10h3v9H5zm5 0h2.9v1.2c.7-1 1.7-1.5 3-1.5 2.7 0 3.6 1.7 3.6 4.2V19h-3v-4.5c0-1.3-.1-2.3-1.6-2.3s-1.9 1.1-1.9 2.3V19h-3z" fill="#fff"/></svg><span>LinkedIn</span></a>
+</div>
 :::
 
 ::: {.profile-content}
@@ -107,6 +114,10 @@ GRH
 ## 경력
 
 ::: {.cv-list}
+::: {.cv-row}
+<span>2026–현재</span>
+<div><strong>Young Scientist Fellow (YSF)</strong><br>고려대학교 IBS 분자분광학 및 동력학 연구단</div>
+:::
 ::: {.cv-row}
 <span>2021–현재</span>
 <div><strong>연구교수</strong><br>고려대학교 IBS 분자분광학 및 동력학 연구단</div>
