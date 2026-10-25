@@ -36,7 +36,7 @@ for(let dir=0;dir<4;dir++) for(const horizontal of [true,false]) {
   const board = [piece(7-3*dx,7-3*dy,"laser",{dir}),piece(7-dx,7-dy,"hwp",{horizontal}),piece(7+dx,7+dy,"sample"),piece(7+2*dx,7+2*dy,"detector")];
   const route = trace(board);
   assert(route.valid);
-  assert.equal(sampleRoute(route.points,1.99).polarization,null);
+  assert.equal(sampleRoute(route.points,1.99).polarization,"s");
   assert.equal(sampleRoute(route.points,2).polarization,"p");
   const pulse = travel(board);
   assert.equal(pulse.end,"detector");
@@ -54,10 +54,10 @@ for(let dir=0;dir<4;dir++) for(const axis of ["h","v"]) {
 }
 for(const first of ["h","v"]) for(const second of ["h","v"]) {
   const board = [piece(1,7,"laser",{dir:0}),piece(2,7,"polarizer",{axis:first}),piece(4,7,"polarizer",{axis:second}),piece(5,7,"sample"),piece(7,7,"detector")];
-  assert.equal(trace(board).valid,first===second);
-  assert.equal(travel(board).end,first===second ? "detector" : "polarizer");
+  assert.equal(trace(board).valid,first==="h" && first===second);
+  assert.equal(travel(board).end,first==="h" && first===second ? "detector" : "polarizer");
 }
-const reflected = [piece(1,10,"laser",{dir:0}),piece(3,10,"polarizer",{axis:"v"}),piece(7,10,"mirror",{slash:true}),piece(7,7,"polarizer",{axis:"h"}),piece(7,5,"sample"),piece(7,3,"detector")];
+const reflected = [piece(1,10,"laser",{dir:0}),piece(2,10,"hwp"),piece(3,10,"polarizer",{axis:"v"}),piece(7,10,"mirror",{slash:true}),piece(7,7,"polarizer",{axis:"h"}),piece(7,5,"sample"),piece(7,3,"detector")];
 assert(trace(reflected).valid);
 assert.equal(travel(reflected).end,"detector");
 
@@ -104,4 +104,41 @@ assert.equal(hasCompletedAllStages([4]), false, "Last stage alone must not trigg
 assert.equal(hasCompletedAllStages([0, 1, 2, 3]), false);
 assert.equal(hasCompletedAllStages([0, 1, 2, 3, 4]), true);
 assert.equal(hasCompletedAllStages([0, 1, 1, 3, 4]), false);
+
+// At the fixed 45-degree setting, each additional HWP swaps s and p.
+// Check the guide and live ray for every direction, either filter, and 0-4 plates.
+for(let dir=0;dir<4;dir++) for(let count=0;count<=4;count++) for(const axis of ["h","v"]) {
+  const [dx,dy] = [[1,0],[0,1],[-1,0],[0,-1]][dir];
+  const sx=7-3*dx, sy=7-3*dy;
+  const plates=Array.from({length:count},(_,i)=>piece(sx+(i+1)*dx,sy+(i+1)*dy,"hwp",{horizontal:i%2===0}));
+  const board=[piece(sx,sy,"laser",{dir}),...plates,piece(sx+5*dx,sy+5*dy,"polarizer",{axis}),piece(sx+6*dx,sy+6*dy,"sample"),piece(sx+7*dx,sy+7*dy,"detector")];
+  const expected=count%2===0 ? "s" : "p";
+  const permitted=axis===polarizationAxis(expected,dir);
+  assert.equal(trace(board).valid,permitted);
+  const pulse=travel(board);
+  assert.equal(pulse.polarization,expected,"A polarizer must not overwrite the incoming state");
+  assert.equal(pulse.end,permitted ? "detector" : "polarizer");
+}
+const polarizationStage=levels[2];
+for(const x of [3,5,6,8]) {
+  const alternate=[...polarizationStage.pieces,piece(x,11,"hwp",{horizontal:false})];
+  assert(trace(alternate).valid,"Any extra HWP on the incoming path is a valid alternate solution");
+  const pulse=travel(alternate);
+  assert.equal(pulse.end,"detector");
+  assert.equal(pulse.polarization,"s");
+  assert(pulse.samples.size>0);
+  assert.equal(alternate.find(p=>p.type==="polarizer").axis,"h","No polarizer adjustment is needed");
+}
+assert.equal(trace([...polarizationStage.pieces,piece(10,11,"hwp")]).valid,false,"A plate after an absorbing polarizer cannot recover the light");
+const changing=cellMap([piece(0,7,"laser",{dir:0}),piece(2,7,"hwp")]);
+const flying=createPulse(changing.get(at(0,7)));
+advancePulse(flying,2.25,changing);
+assert.equal(flying.polarization,"p");
+changing.delete(at(2,7));
+changing.set(at(4,7),piece(4,7,"hwp"));
+advancePulse(flying,1.74,changing);
+assert.equal(flying.polarization,"p","Editing the table does not retroactively change polarization");
+advancePulse(flying,.02,changing);
+assert.equal(flying.polarization,"s","An already-polarized in-flight pulse flips at the new HWP");
+
 console.log("Light Align: 5 sample puzzles, polarization challenge, live edits and all-stage completion passed.");

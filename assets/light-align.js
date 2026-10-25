@@ -13,8 +13,8 @@
       "편광판"
     ],
     "polarizerHelp": [
-      "Tap again to switch H/V. H passes horizontal lines; V passes vertical lines. Dots acquire the selected polarization.",
-      "다시 누르면 H/V가 바뀝니다. H는 가로, V는 세로 편광선을 통과시켜요. 공은 선택한 편광으로 바뀝니다."
+      "Tap again to switch H/V. Only the matching polarization passes; the polarizer preserves that polarization.",
+      "다시 누르면 H/V가 바뀝니다. 일치하는 편광만 통과하며, 통과한 빛의 편광은 그대로 유지돼요."
     ],
     "polarizerBlocked": [
       "The polarizer is blocking this polarization. Switch H/V or change the incoming light.",
@@ -25,8 +25,8 @@
       "반파장판"
     ],
     "hwpHelp": [
-      "The HWP lies at 45 degrees to the table! s-polarization dots become p-polarization lines. Tap again to rotate it.",
-      "바닥에 45도 각도로 놓여있어요! s-polarization dots become p-polarization lines. 다시 누르면 가로·세로가 바뀝니다."
+      "The HWP lies at 45 degrees to the table! s-polarization dots become p-polarization lines. A second HWP changes p lines back into s dots.",
+      "바닥에 45도 각도로 놓여있어요! s-polarization dots become p-polarization lines. 두 번째 HWP를 지나면 p 편광 선이 다시 s 편광 점으로 바뀝니다."
     ],
     "sample": [
       "Sample",
@@ -187,6 +187,34 @@
     "celebrationContinue": [
       "Keep playing",
       "계속하기"
+    ],
+    "start": [
+      "Start",
+      "시작"
+    ],
+    "goalLead": [
+      "Pass through the ",
+      ""
+    ],
+    "goalSample": [
+      "sample",
+      "샘플"
+    ],
+    "goalMiddle": [
+      ", then collect 5 pulses at the ",
+      "을 지난 빛 5개를 "
+    ],
+    "goalDetector": [
+      "detector",
+      "검출기"
+    ],
+    "goalEnd": [
+      ".",
+      "에 모으세요."
+    ],
+    "congratulations": [
+      "Congratulations!",
+      "축하합니다!"
     ]
   };
   let lang = document.documentElement.dataset.siteLanguage === "ko" ? 1 : 0;
@@ -197,7 +225,9 @@
   let running = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let inView = true, focusIndex = at(2, 11), notice = "";
   let completed = [];
+  const completedThisRun = new Set();
   let celebrating = false, celebrationShown = false;
+  let started = false;
   try { const saved = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "[]"); if (Array.isArray(saved)) completed = saved.filter(n => Number.isInteger(n) && n >= 0 && n < levels.length); } catch { /* Optional storage. */ }
   const svg = (name, attributes = {}) => {
     const el = document.createElementNS(ns, name);
@@ -249,6 +279,7 @@
     translate(); rebuild(true);
   }
   function rebuild(reset = false) {
+    window.LightAlignCelebration.close?.();
     route = trace(elements);
     boardCells = new Map(elements.map(p => [at(p.x, p.y), p]));
     if (reset) { hits = 0; won = false; pulses = []; clock = 0; spawn = 0; }
@@ -310,12 +341,11 @@
   }
   function updateStats() {
     $("hits").textContent = `${hits} / 5`;
-    $("count").textContent = `${mirrorCount()}${mode === "puzzle" ? ` / ${levels[level].limit}` : ""}`;
     $("undo").disabled = !history.length;
     $("next").hidden = !(won && mode === "puzzle" && level < levels.length - 1);
   }
   function updateStatus() {
-    const key = notice || (won ? (mode === "puzzle" && hasCompletedAllStages(completed) ? "allDone" : "success") : route?.valid ? "aligned" : route?.end === "detector" ? "missed" : route?.end === "polarizer" ? "polarizerBlocked" : route?.end === "wall" ? "wallHit" : route?.end === "laser" ? "ready" : route?.end || "escape");
+    const key = notice || (won ? (mode === "puzzle" && hasCompletedAllStages([...completedThisRun]) ? "allDone" : "success") : route?.valid ? "aligned" : route?.end === "detector" ? "missed" : route?.end === "polarizer" ? "polarizerBlocked" : route?.end === "wall" ? "wallHit" : route?.end === "laser" ? "ready" : route?.end || "escape");
     $("status").textContent = t(key);
     $("status").dataset.state = won ? "success" : "playing";
   }
@@ -324,12 +354,15 @@
     hits = Math.min(5, hits + 1);
     if (hits === 5) {
       won = true;
-      if (mode === "puzzle" && !completed.includes(level)) {
-        completed.push(level);
-        try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(completed)); } catch { /* Optional storage. */ }
+      if (mode === "puzzle") {
+        completedThisRun.add(level);
+        if (!completed.includes(level)) {
+          completed.push(level);
+          try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(completed)); } catch { /* Optional storage. */ }
+        }
         updateLevelOptions();
       }
-      if (mode === "puzzle" && hasCompletedAllStages(completed) && !celebrationShown) {
+      if (mode === "puzzle" && hasCompletedAllStages([...completedThisRun]) && !celebrationShown) {
         celebrationShown = true; celebrating = true;
         window.LightAlignCelebration.show();
         schedule();
@@ -362,7 +395,7 @@
   function renderPulses() {
     const group = document.getElementById("la-pulses"); group.replaceChildren();
     for (const point of pulses) {
-      if (point.polarization !== null) {
+      if (point.polarization === "p") {
         const vertical = polarizationAxis(point.polarization, point.dir) === "v";
         const line = { x1: point.x * 40 - (vertical ? 0 : 7), y1: point.y * 40 - (vertical ? 7 : 0), x2: point.x * 40 + (vertical ? 0 : 7), y2: point.y * 40 + (vertical ? 7 : 0), stroke: "var(--la-laser)", "stroke-linecap": "round" };
         add(group, "line", { ...line, "stroke-width": 7, opacity: .13 });
@@ -376,13 +409,13 @@
     if (glow) glow.setAttribute("opacity", hits ? (won ? .7 : .3 + .2 * Math.sin(clock * 7)) : 0);
   }
   function schedule() {
-    if (running && !celebrating && inView && !document.hidden) { if (!frame) frame = requestAnimationFrame(animate); }
+    if (started && running && !celebrating && inView && !document.hidden) { if (!frame) frame = requestAnimationFrame(animate); }
     else { if (frame) cancelAnimationFrame(frame); frame = 0; last = 0; }
   }
   function updateLevelOptions() {
     $("level").replaceChildren(...levels.map((item, i) => {
       const option = document.createElement("option"); option.value = i;
-      option.textContent = `${String(i + 1).padStart(2, "0")} · ${item.title[lang]}${completed.includes(i) ? " ✓" : ""}`; return option;
+      option.textContent = `${String(i + 1).padStart(2, "0")} · ${item.title[lang]}${completedThisRun.has(i) ? " ✓" : ""}`; return option;
     }));
     $("level").value = level;
   }
@@ -410,6 +443,16 @@
       button.addEventListener("click", () => { tool = name; notice = ""; renderTools(); updateStatus(); }); return button;
     }));
   }
+  $("start").addEventListener("click", () => {
+    if (started) return;
+    started = true;
+    completedThisRun.clear();
+    celebrationShown = false;
+    $("welcome").hidden = true;
+    $("game").hidden = false;
+    load(); schedule();
+    $("table-title").focus({ preventScroll: true });
+  });
   $("play").addEventListener("click", () => { running = !running; $("play").textContent = t(running ? "pause" : "play"); schedule(); });
   $("show-path").addEventListener("change", drawTable);
   $("level").addEventListener("change", () => { level = Number($("level").value); load(); });
@@ -426,5 +469,5 @@
   document.addEventListener("visibilitychange", schedule);
   document.addEventListener("light-align-celebration-close", () => { celebrating = false; schedule(); });
   if ("IntersectionObserver" in window) new IntersectionObserver(entries => { inView = entries[0].isIntersecting; schedule(); }).observe($("board"));
-  load(); schedule();
+  translate();
 })();

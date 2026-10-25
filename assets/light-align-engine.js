@@ -5,13 +5,16 @@
   const directions = [[1, 0], [0, 1], [-1, 0], [0, -1]];
   const at = (x, y) => y * SIZE + x;
   const piece = (x, y, type, extra = {}) => ({ x, y, type, ...extra });
-  // H/V denote the visible line axis on the table. Mirror turns rotate that
-  // axis with the beam, matching the existing p-polarization representation.
-  const polarizationAxis = (polarization, dir) => polarization === "p" ? (dir % 2 === 0 ? "v" : "h") : polarization;
-  const reflectedPolarization = polarization => polarization === "h" ? "v" : polarization === "v" ? "h" : polarization;
+  // Polarization is stored relative to the ray: s is a dot, p is a line.
+  // At the game's fixed 45-degree setting each HWP swaps s and p.
+  const polarizationAxis = (polarization, dir) => {
+    if (polarization === "s") return dir % 2 === 0 ? "h" : "v";
+    if (polarization === "p") return dir % 2 === 0 ? "v" : "h";
+    return polarization;
+  };
+  const togglePolarization = polarization => polarization === "p" ? "s" : "p";
   function polarize(polarization, dir, axis = "h") {
-    const incoming = polarizationAxis(polarization, dir);
-    return incoming === null || incoming === axis ? axis : "blocked";
+    return polarizationAxis(polarization, dir) === axis ? polarization : "blocked";
   }
   const levels = [
     {
@@ -170,12 +173,12 @@
         "얼라인은 됐는데…"
       ],
       "objective": [
-        "Everything is already aligned. Fix the polarizer so light passes through the sample and reaches the detector. Collect 5 pulses.",
-        "위치는 모두 맞춰져 있어요. 편광판을 조절해 샘플을 지난 빛 5개가 검출기에 도착하게 하세요."
+        "Everything is already aligned. Change the polarizer or add a HWP so light passes through the sample and reaches the detector. Collect 5 pulses.",
+        "위치는 모두 맞춰져 있어요. 편광판을 바꾸거나 HWP를 추가해서 샘플을 지난 빛 5개를 검출기에 보내세요."
       ],
       "hint": [
-        "The HWP produces vertical lines on this horizontal path. Tap the H polarizer once to switch it to V.",
-        "가로로 진행하는 빛은 HWP를 지나 세로 선이 됩니다. H 편광판을 한 번 눌러 V로 바꿔보세요."
+        "Switch the polarizer from H to V, or add another HWP before the H polarizer. Two HWPs turn s → p → s.",
+        "편광판을 H에서 V로 바꾸거나, H 편광판 앞에 HWP를 하나 더 넣어보세요. HWP 두 개를 거치면 s → p → s로 바뀝니다."
       ],
       "limit": 0,
       "initialTool": "polarizer",
@@ -381,7 +384,7 @@
     if (!source) return { points: [], end: "noSource", valid: false, samples: [] };
     let { x, y } = source;
     let dir = source.dir;
-    let polarization = null;
+    let polarization = "s";
     const points = [{ x: x + .5, y: y + .5, dir, polarization }];
     const visited = new Set();
     const samples = new Set();
@@ -402,10 +405,9 @@
       if (!cell) continue;
       if (cell.type === "mirror") {
         dir = cell.slash ? [3, 2, 1, 0][dir] : [1, 0, 3, 2][dir];
-        polarization = reflectedPolarization(polarization);
       }
-      // Game representation: crossing either plate orientation sets the p glyph.
-      else if (cell.type === "hwp") polarization = "p";
+      // Each plate toggles polarization, including for an already p-polarized ray.
+      else if (cell.type === "hwp") polarization = togglePolarization(polarization);
       else if (cell.type === "polarizer") {
         const transmitted = polarize(polarization, dir, cell.axis);
         if (transmitted === "blocked") return finish("polarizer");
@@ -434,7 +436,7 @@
     return {
       x: source.x + .5, y: source.y + .5,
       cellX: source.x, cellY: source.y, dir: source.dir,
-      polarization: null, samples: new Set(), remaining: null, end: null
+      polarization: "s", samples: new Set(), remaining: null, end: null
     };
   }
   // Pulses carry their own position and history. Editing the table only changes
@@ -460,9 +462,8 @@
       if (!cell) continue;
       if (cell.type === "mirror") {
         pulse.dir = cell.slash ? [3, 2, 1, 0][pulse.dir] : [1, 0, 3, 2][pulse.dir];
-        pulse.polarization = reflectedPolarization(pulse.polarization);
       }
-      else if (cell.type === "hwp") pulse.polarization = "p";
+      else if (cell.type === "hwp") pulse.polarization = togglePolarization(pulse.polarization);
       else if (cell.type === "polarizer") {
         const transmitted = polarize(pulse.polarization, pulse.dir, cell.axis);
         if (transmitted === "blocked") pulse.end = "polarizer";

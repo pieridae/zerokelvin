@@ -2,6 +2,7 @@
   "use strict";
   const dialog = document.getElementById("la-celebration");
   if (!dialog) return;
+  const board = document.getElementById("la-board");
   const canvas = document.getElementById("la-fireworks");
   const ctx = canvas.getContext("2d");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -10,7 +11,7 @@
   let width = 0, height = 0, previousFocus = null;
 
   function resize() {
-    width = window.innerWidth; height = window.innerHeight;
+    width = Math.max(1, board.clientWidth); height = Math.max(1, board.clientHeight);
     const ratio = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = Math.round(width * ratio);
     canvas.height = Math.round(height * ratio);
@@ -63,7 +64,7 @@
     if (dialog.open) return;
     previousFocus = document.activeElement;
     particles = []; elapsed = 0; last = 0; nextBurst = .15;
-    dialog.showModal();
+    dialog.show();
     resize();
     if (!ctx) return;
     ctx.clearRect(0, 0, width, height);
@@ -81,12 +82,14 @@
     if (previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
     document.dispatchEvent(new CustomEvent("light-align-celebration-close"));
   }
-  document.getElementById("la-celebration-close").addEventListener("click", () => dialog.close());
+  function close() { if (dialog.open) dialog.close(); }
+  document.getElementById("la-celebration-close").addEventListener("click", close);
+  dialog.addEventListener("keydown", event => { if (event.key === "Escape") { event.preventDefault(); close(); } });
   dialog.addEventListener("close", cleanup);
   window.addEventListener("resize", () => { if (dialog.open) resize(); });
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) { if (frame) cancelAnimationFrame(frame); frame = 0; last = 0; }
     else if (ctx && dialog.open && !frame && elapsed < 8.3 && !reducedMotion.matches) frame = requestAnimationFrame(animate);
   });
-  window.LightAlignCelebration = { show };
+  window.LightAlignCelebration = { show, close };
 })();
